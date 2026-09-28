@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8b8ca" />
+  <title>For Vedika ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --pink: #ef6f98;
+      --dark-pink: #d94f7c;
+      --soft-pink: #fff0f5;
+      --rose: #b83d69;
+      --text: #4b2635;
+      --muted: #8d6574;
+      --white: rgba(255, 255, 255, 0.78);
+    }
+
+    html,
+    body {
+      min-height: 100%;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--text);
+
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,.9), transparent 28%),
+        radial-gradient(circle at 85% 15%, rgba(255,185,207,.65), transparent 30%),
+        radial-gradient(circle at 80% 85%, rgba(255,215,226,.8), transparent 30%),
+        linear-gradient(135deg, #ffdce8 0%, #f9c2d5 45%, #f7d9e4 100%);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+
+    /* ---------- Floating hearts ---------- */
+
+    .hearts {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -50px;
+      color: rgba(255,255,255,.72);
+      font-size: 18px;
+      animation: floatUp linear infinite;
+      filter: drop-shadow(0 4px 8px rgba(190,60,100,.12));
+    }
+
+    .heart:nth-child(1) {
+      left: 8%;
+      animation-duration: 11s;
+      animation-delay: 0s;
+      font-size: 17px;
+    }
+
+    .heart:nth-child(2) {
+      left: 20%;
+      animation-duration: 15s;
+      animation-delay: 3s;
+      font-size: 13px;
+    }
+
+    .heart:nth-child(3) {
+      left: 34%;
+      animation-duration: 12s;
+      animation-delay: 6s;
+      font-size: 22px;
+    }
+
+    .heart:nth-child(4) {
+      left: 52%;
+      animation-duration: 16s;
+      animation-delay: 2s;
+      font-size: 14px;
+    }
+
+    .heart:nth-child(5) {
+      left: 68%;
+      animation-duration: 13s;
+      animation-delay: 5s;
+      font-size: 20px;
+    }
+
+    .heart:nth-child(6) {
+      left: 82%;
+      animation-duration: 17s;
+      animation-delay: 1s;
+      font-size: 15px;
+    }
+
+    .heart:nth-child(7) {
+      left: 93%;
+      animation-duration: 12s;
+      animation-delay: 7s;
+      font-size: 21px;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: .8;
+      }
+
+      90% {
+        opacity: .7;
+      }
+
+      100% {
+        transform: translateY(-115vh) rotate(25deg);
+        opacity: 0;
+      }
+    }
+
+    /* ---------- Main card ---------- */
+
+    .card {
+      position: relative;
+      z-index: 2;
+      width: min(520px, 100%);
+      padding: 42px 34px 36px;
+      text-align: center;
+
+      background: var(--white);
+      border: 1px solid rgba(255,255,255,.75);
+      border-radius: 32px;
+
+      box-shadow:
+        0 30px 80px rgba(157, 57, 92, .18),
+        0 8px 25px rgba(157, 57, 92, .08);
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      animation: cardIn .8s ease both;
+    }
+
+    @keyframes cardIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px) scale(.97);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .small-label {
+      display: inline-block;
+      margin-bottom: 13px;
+      padding: 7px 14px;
+
+      border-radius: 999px;
+      background: rgba(239,111,152,.1);
+      color: var(--dark-pink);
+
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(31px, 7vw, 46px);
+      line-height: 1.08;
+      font-weight: 500;
+      letter-spacing: -.8px;
+      color: #522a39;
+    }
+
+    .subtitle {
+      max-width: 390px;
+      margin: 16px auto 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    /* ---------- Dogs ---------- */
+
+    .dogs {
+      height: 145px;
+      margin: 24px auto 5px;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 16px;
+    }
+
+    .dog {
+      position: relative;
+      font-size: 76px;
+      line-height: 1;
+      display: inline-block;
+      transform-origin: bottom center;
+
+      filter: drop-shadow(0 10px 9px rgba(110,45,65,.13));
+
+      animation:
+        dogBounce 2s ease-in-out infinite,
+        dogWiggle 4s ease-in-out infinite;
+    }
+
+    .dog:nth-child(2) {
+      animation-delay: -.8s;
+      font-size: 70px;
+    }
+
+    @keyframes dogBounce {
+      0%, 100% {
+        transform: translateY(0) rotate(-2deg);
+      }
+
+      50% {
+        transform: translateY(-13px) rotate(2deg);
+      }
+    }
+
+    @keyframes dogWiggle {
+      0%, 85%, 100% {
+        rotate: 0deg;
+      }
+
+      90% {
+        rotate: -4deg;
+      }
+
+      95% {
+        rotate: 4deg;
+      }
+    }
+
+    .paw-hearts {
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #ef6f98;
+      font-size: 20px;
+      animation: tinyHeart 2s ease-in-out infinite;
+    }
+
+    @keyframes tinyHeart {
+      0%, 100% {
+        opacity: .2;
+        transform: translateX(-50%) translateY(4px) scale(.8);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-4px) scale(1);
+      }
+    }
+
+    /* ---------- Buttons ---------- */
+
+    .button-area {
+      position: relative;
+      width: 100%;
+      min-height: 76px;
+      margin-top: 10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 13px;
+    }
+
+    button {
+      border: none;
+      font: inherit;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .yes-btn,
+    .no-btn {
+      min-width: 135px;
+      height: 52px;
+      padding: 0 25px;
+      border-radius: 999px;
+
+      font-size: 15px;
+      font-weight: 700;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+    }
+
+    .yes-btn {
+      color: white;
+      background: linear-gradient(135deg, #ef6f98, #d94f7c);
+
+      box-shadow:
+        0 10px 24px rgba(217,79,124,.28),
+        inset 0 1px 0 rgba(255,255,255,.35);
+    }
+
+    .yes-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow:
+        0 15px 30px rgba(217,79,124,.34),
+        inset 0 1px 0 rgba(255,255,255,.35);
+    }
+
+    .no-btn {
+      color: var(--rose);
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(217,79,124,.25);
+      box-shadow: 0 8px 20px rgba(120,50,75,.08);
+    }
+
+    .no-btn:hover {
+      background: white;
+    }
+
+    /* The No button becomes position:absolute when it starts escaping. */
+    .no-btn.escaping {
+      position: absolute;
+      transition:
+        left .25s cubic-bezier(.2,.8,.2,1),
+        top .25s cubic-bezier(.2,.8,.2,1),
+        transform .15s ease;
+    }
+
+    .hint {
+      margin-top: 8px;
+      color: #aa7a8a;
+      font-size: 11px;
+      opacity: .7;
+    }
+
+    /* ---------- Calendar ---------- */
+
+    .calendar-section {
+      display: none;
+      margin-top: 25px;
+      animation: calendarIn .5s ease both;
+    }
+
+    .calendar-section.show {
+      display: block;
+    }
+
+    @keyframes calendarIn {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .calendar-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    .calendar-subtitle {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .calendar {
+      background: rgba(255,255,255,.6);
+      border: 1px solid rgba(255,255,255,.8);
+      border-radius: 22px;
+      padding: 18px;
+    }
+
+    .calendar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .month-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .month-arrow {
+      width: 34px;
+      height: 34px;
+      min-width: 34px;
+
+      border-radius: 50%;
+      background: rgba(239,111,152,.1);
+      color: var(--rose);
+
+      font-size: 18px;
+    }
+
+    .month-arrow:hover {
+      background: rgba(239,111,152,.18);
+    }
+
+    .weekdays,
+    .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+    }
+
+    .weekday {
+      color: #aa7a8a;
+      font-size: 11px;
+      font-weight: 700;
+      padding-bottom: 5px;
+    }
+
+    .day {
+      aspect-ratio: 1;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: #5b3343;
+      background: transparent;
+
+      font-size: 13px;
+      transition: .18s ease;
+    }
+
+    .day:not(.empty):not(.past):hover {
+      background: rgba(239,111,152,.13);
+      transform: scale(1.08);
+    }
+
+    .day.past {
+      color: #d3bbc4;
+      cursor: default;
+    }
+
+    .day.today {
+      border: 1px solid rgba(239,111,152,.4);
+    }
+
+    .day.selected {
+      color: white;
+      background: linear-gradient(135deg, #ef6f98, #d94f7c);
+      box-shadow: 0 6px 15px rgba(217,79,124,.25);
+    }
+
+    .selected-date {
+      min-height: 22px;
+      margin-top: 15px;
+      color: var(--rose);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .confirm-btn {
+      width: 100%;
+      height: 51px;
+      margin-top: 16px;
+
+      border-radius: 999px;
+      color: white;
+
+      background: linear-gradient(135deg, #ef6f98, #d94f7c);
+
+      font-size: 14px;
+      font-weight: 700;
+
+      box-shadow: 0 10px 24px rgba(217,79,124,.25);
+    }
+
+    .confirm-btn:disabled {
+      opacity: .4;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .confirm-btn:not(:disabled):hover {
+      transform: translateY(-2px);
+    }
+
+    /* ---------- Final screen ---------- */
+
+    .final {
+      display: none;
+      animation: finalIn .7s ease both;
+    }
+
+    .final.show {
+      display: block;
+    }
+
+    @keyframes finalIn {
+      from {
+        opacity: 0;
+        transform: scale(.94);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .final-heart {
+      font-size: 66px;
+      margin: 8px 0 15px;
+      display: inline-block;
+      animation: heartBeat 1.2s ease-in-out infinite;
+    }
+
+    @keyframes heartBeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      15% {
+        transform: scale(1.13);
+      }
+
+      30% {
+        transform: scale(1);
+      }
+    }
+
+    .final h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 32px;
+      font-weight: 500;
+      color: #522a39;
+    }
+
+    .final-date {
+      margin-top: 12px;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--dark-pink);
+    }
+
+    .final-message {
+      max-width: 350px;
+      margin: 14px auto 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    .final-dogs {
+      margin-top: 19px;
+      font-size: 48px;
+      letter-spacing: 7px;
+    }
+
+    .restart {
+      margin-top: 20px;
+      background: transparent;
+      color: #a36c7f;
+      font-size: 11px;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ---------- Mobile ---------- */
+
+    @media (max-width: 520px) {
+      body {
+        padding: 14px;
+        align-items: center;
+      }
+
+      .card {
+        padding: 31px 20px 27px;
+        border-radius: 27px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .dogs {
+        height: 125px;
+        margin-top: 18px;
+      }
+
+      .dog {
+        font-size: 63px;
+      }
+
+      .dog:nth-child(2) {
+        font-size: 58px;
+      }
+
+      .button-area {
+        min-height: 125px;
+        display: block;
+      }
+
+      .yes-btn,
+      .no-btn {
+        width: 135px;
+      }
+
+      .yes-btn {
+        position: relative;
+        z-index: 3;
+      }
+
+      .no-btn {
+        margin-left: 8px;
+      }
+
+      .no-btn.escaping {
+        margin-left: 0;
+      }
+
+      .calendar {
+        padding: 13px;
+      }
+
+      .day {
+        font-size: 12px;
+      }
+    }
+
+    /* ---------- Accessibility ---------- */
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Floating background hearts -->
+  <div class="hearts" aria-hidden="true">
+    <div class="heart">♥</div>
+    <div class="heart">♡</div>
+    <div class="heart">♥</div>
+    <div class="heart">♡</div>
+    <div class="heart">♥</div>
+    <div class="heart">♡</div>
+    <div class="heart">♥</div>
+  </div>
+
+
+  <main class="card">
+
+    <!-- QUESTION SCREEN -->
+    <section id="questionScreen">
+
+      <span class="small-label">A little question for you</span>
+
+      <h1>
+        Vedika,<br>
+        will you go on a date with me?
+      </h1>
+
+      <p class="subtitle">
+        I have a very important question.<br>
+        Please choose wisely. ❤️
+      </p>
+
+
+      <!-- Two animated dogs -->
+      <div class="dogs" aria-hidden="true">
+
+        <div class="dog">
+          🐶
+          <span class="paw-hearts">♥</span>
+        </div>
+
+        <div class="dog">
+          🐕
+        </div>
+
+      </div>
+
+
+      <!-- Buttons -->
+      <div class="button-area" id="buttonArea">
+
+        <button
+          class="yes-btn"
+          id="yesButton"
+          type="button"
+        >
+          Yes ❤️
+        </button>
+
+        <button
+          class="no-btn"
+          id="noButton"
+          type="button"
+        >
+          No
+        </button>
+
+      </div>
+
+      <p class="hint">
+        There is definitely a correct answer.
+      </p>
+
+    </section>
+
+
+    <!-- CALENDAR SCREEN -->
+    <section class="calendar-section" id="calendarSection">
+
+      <div class="calendar-title">
+        Okay, one more thing ❤️
+      </div>
+
+      <p class="calendar-subtitle">
+        Pick the date for our little adventure.
+      </p>
+
+
+      <div class="calendar">
+
+        <div class="calendar-header">
+
+          <button
+            class="month-arrow"
+            id="prevMonth"
+            type="button"
+            aria-label="Previous month"
+          >
+            ‹
+          </button>
+
+          <div class="month-name" id="monthName"></div>
+
+          <button
+            class="month-arrow"
+            id="nextMonth"
+            type="button"
+            aria-label="Next month"
+          >
+            ›
+          </button>
+
+        </div>
+
+
+        <div class="weekdays">
+          <div class="weekday">S</div>
+          <div class="weekday">M</div>
+          <div class="weekday">T</div>
+          <div class="weekday">W</div>
+          <div class="weekday">T</div>
+          <div class="weekday">F</div>
+          <div class="weekday">S</div>
+        </div>
+
+
+        <div class="days" id="days"></div>
+
+        <div class="selected-date" id="selectedDate">
+          Choose a date ❤️
+        </div>
+
+        <button
+          class="confirm-btn"
+          id="confirmButton"
+          type="button"
+          disabled
+        >
+          Confirm this date ❤️
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL SCREEN -->
+    <section class="final" id="finalScreen">
+
+      <div class="final-heart">💗</div>
+
+      <h2>It's a date!</h2>
+
+      <div class="final-date" id="finalDate"></div>
+
+      <p class="final-message">
+        I'll take care of the rest.
+        You just show up. ❤️
+      </p>
+
+      <div class="final-dogs" aria-hidden="true">
+        🐶 🐕
+      </div>
+
+      <button
+        class="restart"
+        id="restartButton"
+        type="button"
+      >
+        Start over
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    /* =========================================================
+       DATE INVITATION
+       ========================================================= */
+
+    const questionScreen = document.getElementById("questionScreen");
+    const calendarSection = document.getElementById("calendarSection");
+    const finalScreen = document.getElementById("finalScreen");
+
+    const yesButton = document.getElementById("yesButton");
+    const noButton = document.getElementById("noButton");
+    const buttonArea = document.getElementById("buttonArea");
+
+    const monthName = document.getElementById("monthName");
+    const daysContainer = document.getElementById("days");
+
+    const prevMonth = document.getElementById("prevMonth");
+    const nextMonth = document.getElementById("nextMonth");
+
+    const selectedDateText = document.getElementById("selectedDate");
+    const confirmButton = document.getElementById("confirmButton");
+
+    const finalDate = document.getElementById("finalDate");
+    const restartButton = document.getElementById("restartButton");
+
+
+    /* =========================================================
+       NO BUTTON
+       ========================================================= */
+
+    function escapeNoButton() {
+
+      if (!noButton.classList.contains("escaping")) {
+        noButton.classList.add("escaping");
+      }
+
+      const areaRect = buttonArea.getBoundingClientRect();
+      const buttonRect = noButton.getBoundingClientRect();
+
+      const maxX = Math.max(
+        5,
+        areaRect.width - buttonRect.width - 5
+      );
+
+      const maxY = Math.max(
+        5,
+        areaRect.height - buttonRect.height - 5
+      );
+
+      /*
+        Keep the button away from the Yes button,
+        especially on mobile.
+      */
+
+      let x;
+      let y;
+
+      for (let i = 0; i < 30; i++) {
+
+        x = Math.random() * maxX;
+        y = Math.random() * maxY;
+
+        const yesRect = yesButton.getBoundingClientRect();
+
+        const proposedLeft = areaRect.left + x;
+        const proposedTop = areaRect.top + y;
+
+        const overlap =
+          proposedLeft < yesRect.right + 15 &&
+          proposedLeft + buttonRect.width > yesRect.left - 15 &&
+          proposedTop < yesRect.bottom + 15 &&
+          proposedTop + buttonRect.height > yesRect.top - 15;
+
+        if (!overlap) break;
+      }
+
+      noButton.style.left = `${x}px`;
+      noButton.style.top = `${y}px`;
+    }
+
+
+    noButton.addEventListener("pointerenter", escapeNoButton);
+    noButton.addEventListener("pointerdown", function(event) {
+      event.preventDefault();
+      escapeNoButton();
+    });
+
+    noButton.addEventListener("focus", escapeNoButton);
+
+    noButton.addEventListener("click", function(event) {
+      event.preventDefault();
+      escapeNoButton();
+    });
+
+
+    /* =========================================================
+       YES BUTTON
+       ========================================================= */
+
+    yesButton.addEventListener("click", function() {
+
+      questionScreen.style.display = "none";
+
+      calendarSection.classList.add("show");
+
+      renderCalendar();
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+
+    /* =========================================================
+       CALENDAR
+       ========================================================= */
+
+    const today = new Date();
+
+    let displayedMonth = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      1
+    );
+
+    let chosenDate = null;
+
+
+    function renderCalendar() {
+
+      const year = displayedMonth.getFullYear();
+      const month = displayedMonth.getMonth();
+
+      const monthFormatter = new Intl.DateTimeFormat(
+        "en-US",
+        {
+          month: "long",
+          year: "numeric"
+        }
+      );
+
+      monthName.textContent =
+        monthFormatter.format(displayedMonth);
+
+      daysContainer.innerHTML = "";
+
+
+      const firstDay = new Date(
+        year,
+        month,
+        1
+      ).getDay();
+
+      const daysInMonth = new Date(
+        year,
+        month + 1,
+        0
+      ).getDate();
+
+
+      /* Empty cells before the first day */
+
+      for (let i = 0; i < firstDay; i++) {
+
+        const empty = document.createElement("div");
+
+        empty.className = "day empty";
+
+        daysContainer.appendChild(empty);
+      }
+
+
+      /* Actual dates */
+
+      for (let date = 1; date <= daysInMonth; date++) {
+
+        const button = document.createElement("button");
+
+        button.type = "button";
+        button.className = "day";
+
+        button.textContent = date;
+
+
+        const currentDate = new Date(
+          year,
+          month,
+          date
+        );
+
+        currentDate.setHours(0, 0, 0, 0);
+
+
+        const todayStart = new Date(
+          today.getFullYear(),
+          today.getMonth(),
+          today.getDate()
+        );
+
+        todayStart.setHours(0, 0, 0, 0);
+
+
+        /* Disable dates in the past */
+
+        if (currentDate < todayStart) {
+
+          button.classList.add("past");
+          button.disabled = true;
+
+        } else {
+
+          button.addEventListener(
+            "click",
+            () => selectDate(currentDate)
+          );
+        }
+
+
+        /* Today */
+
+        if (
+          currentDate.getTime() ===
+          todayStart.getTime()
+        ) {
+          button.classList.add("today");
+        }
+
+
+        /* Selected date */
+
+        if (
+          chosenDate &&
+          currentDate.getTime() ===
+          chosenDate.getTime()
+        ) {
+          button.classList.add("selected");
+        }
+
+
+        daysContainer.appendChild(button);
+      }
+    }
+
+
+    function selectDate(date) {
+
+      chosenDate = new Date(date);
+
+      const formatter = new Intl.DateTimeFormat(
+        "en-US",
+        {
+          weekday: "long",
+          month: "long",
+          day: "numeric",
+          year: "numeric"
+        }
+      );
+
+      selectedDateText.textContent =
+        formatter.format(chosenDate) + " ❤️";
+
+      confirmButton.disabled = false;
+
+      renderCalendar();
+    }
+
+
+    /* =========================================================
+       MONTH NAVIGATION
+       ========================================================= */
+
+    prevMonth.addEventListener("click", function() {
+
+      const currentMonth = new Date(
+        today.getFullYear(),
+        today.getMonth(),
+        1
+      );
+
+      const previousMonth = new Date(
+        displayedMonth.getFullYear(),
+        displayedMonth.getMonth() - 1,
+        1
+      );
+
+      /*
+        Don't allow going before the current month.
+      */
+
+      if (previousMonth >= currentMonth) {
+
+        displayedMonth = previousMonth;
+
+        renderCalendar();
+      }
+    });
+
+
+    nextMonth.addEventListener("click", function() {
+
+      displayedMonth = new Date(
+        displayedMonth.getFullYear(),
+        displayedMonth.getMonth() + 1,
+        1
+      );
+
+      renderCalendar();
+    });
+
+
+    /* =========================================================
+       CONFIRM DATE
+       ========================================================= */
+
+    confirmButton.addEventListener("click", function() {
+
+      if (!chosenDate) return;
+
+
+      const formatter = new Intl.DateTimeFormat(
+        "en-US",
+        {
+          weekday: "long",
+          month: "long",
+          day: "numeric",
+          year: "numeric"
+        }
+      );
+
+
+      finalDate.textContent =
+        formatter.format(chosenDate);
+
+
+      calendarSection.classList.remove("show");
+
+      finalScreen.classList.add("show");
+
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+
+      createExtraHearts();
+    });
+
+
+    /* =========================================================
+       EXTRA HEARTS AFTER CONFIRMATION
+       ========================================================= */
+
+    function createExtraHearts() {
+
+      const container =
+        document.querySelector(".hearts");
+
+      for (let i = 0; i < 14; i++) {
+
+        const heart =
+          document.createElement("div");
+
+        heart.className = "heart";
+
+        heart.textContent =
+          Math.random() > .5 ? "♥" : "♡";
+
+        heart.style.left =
+          Math.random() * 100 + "%";
+
+        heart.style.fontSize =
+          (12 + Math.random() * 18) + "px";
+
+        heart.style.animationDuration =
+          (7 + Math.random() * 7) + "s";
+
+        heart.style.animationDelay =
+          Math.random() * 2 + "s";
+
+        container.appendChild(heart);
+      }
+    }
+
+
+    /* =========================================================
+       RESTART
+       ========================================================= */
+
+    restartButton.addEventListener("click", function() {
+
+      chosenDate = null;
+
+      displayedMonth = new Date(
+        today.getFullYear(),
+        today.getMonth(),
+        1
+      );
+
+      selectedDateText.textContent =
+        "Choose a date ❤️";
+
+      confirmButton.disabled = true;
+
+      finalScreen.classList.remove("show");
+
+      calendarSection.classList.remove("show");
+
+      questionScreen.style.display = "block";
+
+      noButton.classList.remove("escaping");
+
+      noButton.style.left = "";
+      noButton.style.top = "";
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+  </script>
+
+</body>
+</html>
